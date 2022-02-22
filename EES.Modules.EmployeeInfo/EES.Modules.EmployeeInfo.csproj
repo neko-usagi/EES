@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="ReactiveProperty" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EES.Core\EES.Core.csproj" />
+    <ProjectReference Include="..\EES.Database\EES.Database.csproj" />
+    <ProjectReference Include="..\EES.Services.Interfaces\EES.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
