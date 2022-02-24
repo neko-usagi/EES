@@ -1,4 +1,5 @@
-﻿using EES.Modules.EmployeeInfo;
+﻿using EES.Database;
+using EES.Modules.EmployeeInfo;
 using EES.Service;
 using EES.Services.Interfaces;
 using EES.Views;
@@ -21,6 +22,7 @@ namespace EES
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IEmployeeService, EmployeeService>();
+            containerRegistry.RegisterSingleton<ITransactionContext, TransactionContext>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

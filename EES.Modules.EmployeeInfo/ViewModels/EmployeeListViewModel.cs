@@ -10,8 +10,7 @@ namespace EES.Modules.EmployeeInfo.ViewModels
     {
         public EmployeeListViewModel(IRegionManager regionManager, IEmployeeService employeeService) : base(regionManager)
         {
-            this.EmployeeList.Add(new DtEmployee() { EmployeeId = 1, Name = "èºñ{" });
-            this.EmployeeList.Add(new DtEmployee() { EmployeeId = 2, Name = "éRìc" });
+            this.EmployeeList.AddRangeOnScheduler(employeeService.GetEmployees());
         }
 
         public ReactiveCollection<DtEmployee> EmployeeList { get; set; } = new ReactiveCollection<DtEmployee>();
